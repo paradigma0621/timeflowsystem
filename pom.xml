@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>com.completeTimeFlow</groupId>
-	<artifactId>timeFlow</artifactId>
+	<artifactId>Core-timeFlow</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Core</name>
 	<description>Core application in Spring Boot</description>

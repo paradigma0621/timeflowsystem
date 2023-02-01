@@ -56,7 +56,7 @@ public class PersonController {
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
-    @RequestMapping("/create")
+    @RequestMapping("/savePerson")
     @PostMapping
     public ResponseEntity<Person> createPerson(@RequestBody Person person) {
         personRepository.save(person);

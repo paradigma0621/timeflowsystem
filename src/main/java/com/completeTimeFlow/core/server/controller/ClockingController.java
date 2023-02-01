@@ -52,6 +52,5 @@ public class ClockingController {
     public ResponseEntity<String> sayHello() {
         return new ResponseEntity<String>("Hello!!!", HttpStatus.OK);
     }
-    
-    }
+
 }
