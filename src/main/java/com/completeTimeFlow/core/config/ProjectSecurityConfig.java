@@ -33,7 +33,7 @@ public class ProjectSecurityConfig {
                         return config;
                     }
                 }).and().authorizeHttpRequests()
-                .antMatchers("/welcome").authenticated()
+                .antMatchers("/welcome", "/myproperty").authenticated()
                 .antMatchers("/sayHello").permitAll()
                 .antMatchers(HttpMethod.GET).permitAll()
                 .and().formLogin()

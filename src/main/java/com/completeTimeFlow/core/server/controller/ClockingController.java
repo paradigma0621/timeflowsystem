@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 ///@CrossOrigin(origins = "*")
@@ -51,6 +53,14 @@ public class ClockingController {
     @GetMapping
     public ResponseEntity<String> sayHello() {
         return new ResponseEntity<String>("Hello!!!", HttpStatus.OK);
+    }
+
+    @RequestMapping("/getClocks")
+    @GetMapping
+    public ResponseEntity<List<Clocking>> getClocks() {
+        List<Clocking> listOfClocks = new ArrayList<>();
+        listOfClocks = clockingRepository.getEveryBody();
+        return new ResponseEntity<>(listOfClocks, HttpStatus.OK);
     }
 
 }
